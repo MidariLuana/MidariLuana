@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Midari Profille</title>
+  <title>Midari Profile</title>
   <style>
     body {
       background-color: pink;
@@ -18,106 +18,385 @@
     
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjusted width */
-      grid-gap: 20px;
-    }
-    
-    .gallery-item {
-      background-color: #FFF;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      height: 500px; /* Adjusted height */
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px; /* Adjust the spacing between items */
+      margin-bottom: -20px;
+      padding-bottom: 20px;
+      margin-top: 80px;
+      margin-left: 200px; /* Adjust the negative margin to shift images to the right */
+      justify-content: flex-start; /* Adjust the alignment of images */
     }
     
     .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Maintain aspect ratio and fill the container */
+      object-fit: contain; /* Scale the image down while maintaining aspect ratio */
+      display: block;
+      border-radius: 0; /* Remove the border radius */
+      transition: transform 0.3s ease; /* Add transition for hover effect */
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.5); /* Increase the scale on hover */
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .sidebar {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1; /* Ensure the menu buttons are on top */
+    }
+    
+    .sidebar button {
+      display: block;
+      background-color: #FF69B4;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
     }
   </style>
+  <script>
+    function showHome() {
+      var galleryItems = document.getElementsByClassName('gallery-item');
+      
+      for (var i = 0; i < galleryItems.length; i++) {
+        galleryItems[i].classList.remove('hidden');
+      }
+      
+      var beachPhotos = document.getElementsByClassName('beach-photo');
+      var parkPhotos = document.getElementsByClassName('park-photo');
+      var galleryThree = document.getElementsByClassName('gallery-three');
+      
+      for (var j = 0; j < beachPhotos.length; j++) {
+        beachPhotos[j].classList.add('hidden');
+      }
+      
+      for (var k = 0; k < parkPhotos.length; k++) {
+        parkPhotos[k].classList.add('hidden');
+      }
+      
+      for (var l = 0; l < galleryThree.length; l++) {
+        galleryThree[l].classList.add('hidden');
+      }
+      
+      var h1 = document.querySelector('h1');
+      h1.classList.remove('hidden');
+    }
+    
+    function showBeachPhotos() {
+      var galleryItems = document.getElementsByClassName('gallery-item');
+      
+      for (var i = 0; i < galleryItems.length; i++) {
+        galleryItems[i].classList.add('hidden');
+      }
+      
+      var beachPhotos = document.getElementsByClassName('beach-photo');
+      
+      for (var j = 0; j < beachPhotos.length; j++) {
+        beachPhotos[j].classList.remove('hidden');
+      }
+      
+      var h1 = document.querySelector('h1');
+      h1.classList.add('hidden');
+    }
+    
+    function showParkPhotos() {
+      var galleryItems = document.getElementsByClassName('gallery-item');
+      
+      for (var i = 0; i < galleryItems.length; i++) {
+        galleryItems[i].classList.add('hidden');
+      }
+      
+      var parkPhotos = document.getElementsByClassName('park-photo');
+      
+      for (var j = 0; j < parkPhotos.length; j++) {
+        parkPhotos[j].classList.remove('hidden');
+      }
+      
+      var h1 = document.querySelector('h1');
+      h1.classList.add('hidden');
+    }
+    
+    function showGalleryThree() {
+      var galleryItems = document.getElementsByClassName('gallery-item');
+      
+      for (var i = 0; i < galleryItems.length; i++) {
+        galleryItems[i].classList.add('hidden');
+      }
+      
+      var galleryThree = document.getElementsByClassName('gallery-three');
+      
+      for (var j = 0; j < galleryThree.length; j++) {
+        galleryThree[j].classList.remove('hidden');
+      }
+      
+      var h1 = document.querySelector('h1');
+      h1.classList.add('hidden');
+    }
+  </script>
 </head>
 <body>
-  <h1><u>I Always ready to have Anal Sex!</u></h1>
-  <div class="gallery">
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/kpkh3qO.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/IyNZ1JG.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/cJWc27I.png">
-    </div>
-      <div class="gallery-item">
-      <img src="https://i.imgur.com/POufXF4.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/A641n0r.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/PhZc7SN.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/G3iBt0t.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/XboBdzS.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/AtzsRUa.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/FL5Ysay.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/NGfHzpz.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/NNiEySx.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/eqkpNb2.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/rCiybPL.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/B9SJnn9.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/YnOI9zC.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/gkaF9Db.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/8RscUBU.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/0BzrKyi.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/lhjX4bw.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/DBttk2L.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/eEX6pyy.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/4HHZwEq.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/JgXGOpm.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/HreXQuj.png">
-    </div>
-    <div class="gallery-item">
-      <img src="https://i.imgur.com/HNgnIcC.png">
-    </div>
+  <div class="sidebar">
+    <button onclick="showHome()">Home</button>
+    <button onclick="showBeachPhotos()">My Gallery</button>
+    <button onclick="showParkPhotos()">my kinks ❤</button>
+    <button onclick="showGalleryThree()"><u>my Anthro characters</u></button>
   </div>
+  <h1><u><font size="4">Yes, I like feeling you inside me.<br>
+I wanna have rough anal sex <br>Harder, pleaase... i feel so lonely <br>my ass desperately needs a penis inside.</font></u>
+      <p align="center"><img src="https://i.imgur.com/NNiEySx.png" height="300px"></p></h1>
+  <div class="gallery">
+    <div class="gallery-item home-photo">
+      <!-- Leave this section empty for the home page -->
+    </div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/kpkh3qO.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/IyNZ1JG.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/cJWc27I.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/POufXF4.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/A641n0r.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/PhZc7SN.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/G3iBt0t.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/XboBdzS.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/AtzsRUa.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/FL5Ysay.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/NGfHzpz.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/NNiEySx.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/eqkpNb2.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/rCiybPL.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/B9SJnn9.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/YnOI9zC.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/gkaF9Db.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/8RscUBU.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/0BzrKyi.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/lhjX4bw.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/DBttk2L.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/eEX6pyy.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/4HHZwEq.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/JgXGOpm.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/HreXQuj.png" height="300px">
+</div>
+<div class="gallery-item beach-photo">
+  <img src="https://i.imgur.com/HNgnIcC.png" height="300px">
+</div>
+
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/Nx2rHXe.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/CjhuJjr.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/2ulIlxq.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/AqP4h96.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/cjHi4Mn.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/x4uPkfc.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/eaLrWQz.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/qxX4hIV.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/Ek8jdkM.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/makZ18t.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/35JLNxG.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/ZdIuyw7.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/KZQoRtB.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/kunuMNQ.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/4sdPMuk.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/j7tB1Fr.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/ERxKBwx.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/GdndIeA.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/cx7UZnY.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/MwotHHl.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/xrBKUTr.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/JgnIV3Y.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/aLsA6lC.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/gUN20v2.png" width="380px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/sM6IFMO.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/j4ywHqn.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/uMOTSYH.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/Btg7V5e.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/LyCoLe5.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/8cDWjis.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/3d3zdtT.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/9tdIKgN.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/pCj0mFM.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/SbiuPVv.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/2vJUkat.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/3oyFlya.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/KJXMBnU.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/6yjVNDp.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/55NwlHm.png" height="300px">
+</div>
+<div class="gallery-item park-photo">
+  <img src="https://i.imgur.com/yKzPuBT.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/rIP6w4s.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/Nbz9t1D.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/OBA9BPs.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/mRbJX0G.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/Aph5vfC.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/mpBby9H.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/EINWROM.png" height="300px">
+</div>
+
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/1IVsSwy.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/94v7mlN.png" height="300px">
+</div>
+<div class="gallery-item gallery-three">
+  <img src="https://i.imgur.com/FBA7vCf.png" height="300px">
+</div>
+  </div>
+
+  <script>
+    // Hide all gallery items except the home photo on page load
+    var galleryItems = document.getElementsByClassName('gallery-item');
+    for (var i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].classList.add('hidden');
+    }
+    
+    // Show the home photo initially
+    var homePhoto = document.querySelector('.home-photo');
+    homePhoto.classList.remove('hidden');
+  </script>
 </body>
 </html>
